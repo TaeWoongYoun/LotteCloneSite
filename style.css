@@ -4,6 +4,14 @@
     margin: 0 auto;
 }
 
+ul li{
+    list-style: none;
+}
+
+body{
+    overflow-y: hidden;
+}
+
 a{
     text-decoration: none;
 }
@@ -14,6 +22,8 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+    z-index: 100;
 }
 
 nav img{
@@ -32,6 +42,60 @@ nav img{
 
 .imgSlide{
     width: 100%;
-    height: 600px;
-    background-color: aquamarine;
+    height: 700px;
+    position: relative;
+    overflow: hidden;
+}
+
+.window{
+    position: absolute;
+    width: 1440px;
+    height: 2800px;    
+    animation: 6s infinite linear window;
+    display: flex;
+}
+
+.window li{
+    width: 1440px;
+    height: 700px;
+}
+
+@keyframes window{
+
+    0%{
+        bottom: 0px;
+    }
+
+    23%{
+        bottom: 0px;
+    }
+
+    33%{
+        bottom: -700px;
+    }
+
+    56%{
+        bottom: -700px;
+    }
+
+    66%{
+        bottom: -1400px;
+    }
+
+    90%{
+        bottom: -1400px;
+    }
+
+    100%{
+        bottom: -2100px;
+    }
+
+}
+
+footer{
+    width: 100%;
+    height: 100px;
+    background-color: grey;
+    position: relative;
+    top: -100px;
 }
