@@ -11,10 +11,12 @@
 </head>
 <body>
     <header>
-        <nav>
+        
+        <div class="hamburger">
             <!-- 세로 네비게이션 -->
-            <img src="image/hamburger.png" alt="">
-        </nav>
+            <img id="btn" src="image/hamburger.png" alt="">
+        </div>
+
         <div class="logo">
             <!-- 샐러드볼 이미지 -->
             <img src="image/logo.png" alt="">
@@ -25,13 +27,101 @@
         </div>
     </header>
     <main>
+        <nav>
+            <div class="imgBox" id="close">
+                <img src="image/close.png" alt="">
+            </div>
+            <ul class="menu">
+                <li>
+                <a href="#">MENU1</a>
+                <ul class="submenu">
+                    <li><a href="#">submenu01</a></li>
+                    <li><a href="#">submenu02</a></li>
+                    <li><a href="#">submenu03</a></li>
+                    <li><a href="#">submenu04</a></li>
+                </ul>
+                </li>
+                <li>
+                <a href="#">MENU2</a>
+                <ul class="submenu">
+                    <li><a href="#">submenu01</a></li>
+                    <li><a href="#">submenu02</a></li>
+                    <li><a href="#">submenu03</a></li>
+                    <li><a href="#">submenu04</a></li>
+                </ul>
+                </li>
+                <li>
+                <a href="#">MENU3</a>
+                <ul class="submenu">
+                    <li><a href="#">submenu01</a></li>
+                    <li><a href="#">submenu02</a></li>
+                    <li><a href="#">submenu03</a></li>
+                    <li><a href="#">submenu04</a></li>
+                </ul>
+                </li>
+                <li>
+                <a href="#">MENU4</a>
+                <ul class="submenu">
+                    <li><a href="#">submenu01</a></li>
+                    <li><a href="#">submenu02</a></li>
+                    <li><a href="#">submenu03</a></li>
+                    <li><a href="#">submenu04</a></li>
+                </ul>
+                </li>
+                <li>
+                <a href="#">MENU5</a>
+                <ul class="submenu">
+                    <li><a href="#">submenu01</a></li>
+                    <li><a href="#">submenu02</a></li>
+                    <li><a href="#">submenu03</a></li>
+                    <li><a href="#">submenu04</a></li>
+                </ul>
+                </li>
+            </ul>
+        </nav>
         <!-- 세로 캐러셀 -->
         <div class="imgSlide">
             <ul class="window">
-                <li style="background-color: aquamarine;"></li>
-                <li style="background-color: aqua;"></li>
-                <li style="background-color: royalblue;"></li>
-                <li style="background-color: aquamarine;"></li>
+                <li style="background-color: #ADC5FF;">
+                    <div class="slideBox">
+                        <h4>title</h4>
+                        <h1>main text <br>text main</h1>
+                        <h4>sub text</h4>
+                        <div class="btnBox">
+                            <button>img1</button>
+                            <button>img2</button>
+                            <button>img3</button>
+                        </div>
+                        <button class="nextBtn">next</button>
+                    </div>
+                </li>
+                <li style="background-color: aqua;">
+                    <div class="slideBox">
+                        <h4>title</h4>
+                        <h1>main text <br>text main</h1>
+                        <h4>sub text</h4>
+                        <div class="btnBox">
+                            <button>img1</button>
+                            <button>img2</button>
+                            <button>img3</button>
+                        </div>
+                        <button class="nextBtn2">next</button>
+                        <button class="prevBtn">prev</button>
+                    </div>
+                </li>
+                <li style="background-color: #FF8749;">
+                    <div class="slideBox">
+                        <h4>title</h4>
+                        <h1>main text <br>text main</h1>
+                        <h4>sub text</h4>
+                        <div class="btnBox">
+                            <button>img1</button>
+                            <button>img2</button>
+                            <button>img3</button>
+                        </div>
+                        <button class="prevBtn2">prev</button>
+                    </div>
+                </li>
             </ul>
         </div>
         <footer>
@@ -39,6 +129,52 @@
         </footer>
     </main>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <script>
+
+        var 지금사진 = 1
+
+        $('#btn').on('click', function(){
+            $('nav').addClass('noneBox');
+        })
+
+        $('#close').on('click', function(){
+            $('nav').removeClass('noneBox');
+        })
+
+        $('.nextBtn').on('click', function(){
+            $('.window').css('transform', 'translateY(-700px)');
+        })
+        
+        $('.nextBtn2').on('click', function(){
+            $('.window').css('transform', 'translateY(-1400px)');
+        })
+
+        $('.prevBtn').on('click', function(){
+            $('.window').css('transform', 'translateY(0)');
+        })
+
+        $('.prevBtn2').on('click', function(){
+            $('.window').css('transform', 'translateY(-700px)');
+        })
+
+        // $('.nextBtn').on('click', function(){
+        //     if(지금사진 == 1){
+        //         $('.window').css('transform', 'translateY(-700px)');
+        //         지금사진 += 1; 
+        //     } else if(지금사진 == 2){
+        //         $('.window').css('transform', 'translateY(-1400px)');
+        //     }
+        // })
+
+        // $('.prevBtn').on('click', function(){
+        //     if(지금사진 == 3){
+        //         $('.window').css('transform', 'translateY(-700px)');
+        //         지금사진 -= 1; 
+        //     } else if(지금사진 == 2){
+        //         $('.window').css('transform', 'translateY(0)');
+        //     }
+        // })
+    </script>
 </body>
 </html>
 <!-- 
