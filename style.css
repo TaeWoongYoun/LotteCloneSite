@@ -41,18 +41,19 @@ nav img{
 }
 
 .imgSlide{
-    width: 100%;
+    width: 1440px;
     height: 700px;
     position: relative;
     overflow: hidden;
-}
+    top: -100px;
+}   
 
 .window{
     position: absolute;
     width: 1440px;
     height: 2800px;    
     animation: 6s infinite linear window;
-    display: flex;
+    margin-left: -32px;
 }
 
 .window li{
@@ -97,5 +98,5 @@ footer{
     height: 100px;
     background-color: grey;
     position: relative;
-    top: -100px;
+    top: -120px;
 }
