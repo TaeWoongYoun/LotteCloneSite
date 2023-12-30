@@ -10,6 +10,10 @@ ul li{
 
 body{
     overflow-y: hidden;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none
 }
 
 a{
@@ -31,6 +35,29 @@ header{
     height: 60px;
     padding: 5px;
     border: black 1px solid;
+}
+
+.hamburger{
+    width: 55px;
+    height: 55px;
+    padding: 5px;
+}
+
+.line:nth-child(1){
+    margin-top: 7px;
+}
+
+.line{
+    width: 50px;
+    height: 5px;
+    background-color: black;
+    border-radius: 15px;
+    margin-top: 10px;
+}
+
+.lineText{
+    margin-left: 1px;
+    margin-top: -3px;
 }
 
 nav{
@@ -105,9 +132,36 @@ nav{
     right: 9px;
 }
 
+.close {
+    width: 50px;
+    height: 50px;
+}
+.close:before, .close:after {
+    position: absolute;
+    left: 22px;
+    content:' ';
+    height: 40px;
+    width: 4px;
+    background-color: #000;
+}
+.close:before {
+    transform: rotate(45deg);
+}
+.close:after {
+    transform: rotate(-45deg);
+}
+
 .imgBox img{
     width: 100%;
     height: 100%;
+}
+
+.logo{
+    /* margin-left: 190px; */
+    font-size: 35px; 
+    font-family: 'Kalnia', serif;
+    color: lightseagreen;
+    font-weight: 600;
 }
 
 .logo img{
