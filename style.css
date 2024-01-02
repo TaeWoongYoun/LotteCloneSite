@@ -272,5 +272,22 @@ footer{
     background-color: gray;
     position: relative;
     top: -120px;
+    display: flex;
 }
 
+.flogo{
+    width: 150px;
+    height: 100px;
+    text-align: center;
+    line-height: 85px;
+}
+
+.copyright{
+    width: 600px;
+    height: 100px;
+}
+
+.icon{
+    width: 440px;
+    height: 100px;
+}
