@@ -1,4 +1,4 @@
-var 지금사진 = 1
+// var 지금사진 = 1
         //아이디가 버튼인 아이를 늘릭하면 nav에 noneBox라는 클래스를 추가해서
         // css에 미리 설정해둔 noneBox의 스타일을 적용함
         $('#btn').on('click', function(){
